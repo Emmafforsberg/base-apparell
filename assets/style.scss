@@ -1,0 +1,151 @@
+$mainMargin: 1.5rem 6rem;
+$color: #d5b5b6;
+$success: #be7561;
+$error: #e28d8d;
+
+@mixin font {
+  font-family: Avenir Next, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: none;
+}
+.mainWrapper {
+  display: flex;
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bigLogo,
+.mdLogo {
+  margin: $mainMargin;
+  display: inline-block;
+  height: 5vh;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.desktopHero {
+  height: 100vh;
+  float: right;
+}
+.mobileHero {
+  width: 100%;
+  display: block;
+}
+.contentWrapper {
+  width: 55%;
+  margin: $mainMargin;
+}
+
+.contentWrapper > h1 {
+  margin: 2.5rem 0rem;
+}
+
+.contentWrapper > p {
+  letter-spacing: 0.1rem;
+  color: $color;
+}
+.content {
+  .attribution {
+    text-align: center;
+    color: $color;
+    a {
+      color: $error;
+    }
+  }
+}
+span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+  font-size: 4.5rem;
+  padding: 0.4rem 0rem;
+  @include font;
+  font-weight: 500;
+}
+
+.introText {
+  font-size: 1.2rem;
+  @include font;
+  /* line-height: 2rem; */
+}
+.colorPop {
+  color: $color;
+  @include font;
+}
+.tablet {
+  display: flex;
+}
+/* To get the button in place: 
+-> https://codepen.io/altescape/pen/PobLPb
+*/
+form {
+  position: relative;
+  overflow: hidden;
+}
+.email {
+  border: 1px solid $color;
+  border-radius: 5rem;
+  padding: 0.8rem;
+  position: relative;
+  margin-top: 1.5rem;
+  color: $color;
+}
+.subBtn {
+  position: absolute;
+  line-height: 50px;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  padding: 0.1rem 2.5rem;
+  background: linear-gradient(90deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  border-radius: 5rem;
+  margin-top: 1.5rem;
+}
+/****************************/
+.email:hover {
+  border-color: #a28586;
+}
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: $color !important;
+}
+
+.error {
+  display: none;
+  position: absolute;
+  padding: 0.5rem;
+}
+.errorText {
+  color: $error !important;
+  margin: 0;
+  margin-left: 2rem;
+  text-align: left;
+  padding: 0.5em;
+}
+.successText {
+  color: $success;
+  padding: 0.5rem;
+}
+/* Tablet/mobile */
+@media (max-width: 992px) {
+  .tablet {
+    flex-direction: column;
+  }
+
+  span {
+    font-size: 3.5rem;
+  }
+  .introText {
+    font-size: 1.2rem;
+  }
+}

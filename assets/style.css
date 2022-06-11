@@ -1,0 +1,173 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+.mainWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bigLogo,
+.mdLogo {
+  margin: 1.5rem 6rem;
+  display: inline-block;
+  height: 5vh;
+}
+
+.bigLogo:hover,
+.mdLogo:hover {
+  cursor: pointer;
+}
+
+.desktopHero {
+  height: 100vh;
+  float: right;
+}
+
+.mobileHero {
+  width: 100%;
+  display: block;
+}
+
+.contentWrapper {
+  width: 55%;
+  margin: 1.5rem 6rem;
+}
+
+.contentWrapper > h1 {
+  margin: 2.5rem 0rem;
+}
+
+.contentWrapper > p {
+  letter-spacing: 0.1rem;
+  color: #d5b5b6;
+}
+
+.content .attribution {
+  text-align: center;
+  color: #d5b5b6;
+}
+
+.content .attribution a {
+  color: #e28d8d;
+}
+
+span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+  font-size: 4.5rem;
+  padding: 0.4rem 0rem;
+  font-family: Avenir Next, Helvetica, sans-serif;
+  font-weight: 300;
+  font-weight: 500;
+}
+
+.introText {
+  font-size: 1.2rem;
+  font-family: Avenir Next, Helvetica, sans-serif;
+  font-weight: 300;
+  /* line-height: 2rem; */
+}
+
+.colorPop {
+  color: #d5b5b6;
+  font-family: Avenir Next, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.tablet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* To get the button in place: 
+-> https://codepen.io/altescape/pen/PobLPb
+*/
+form {
+  position: relative;
+  overflow: hidden;
+}
+
+.email {
+  border: 1px solid #d5b5b6;
+  border-radius: 5rem;
+  padding: 0.8rem;
+  position: relative;
+  margin-top: 1.5rem;
+  color: #d5b5b6;
+}
+
+.subBtn {
+  position: absolute;
+  line-height: 50px;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  padding: 0.1rem 2.5rem;
+  background: -webkit-gradient(linear, left top, right top, from(#f8bfbf), to(#ee8c8c));
+  background: linear-gradient(90deg, #f8bfbf, #ee8c8c);
+  border: none;
+  border-radius: 5rem;
+  margin-top: 1.5rem;
+}
+
+/****************************/
+.email:hover {
+  border-color: #a28586;
+}
+
+.form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #d5b5b6 !important;
+}
+
+.error {
+  display: none;
+  position: absolute;
+  padding: 0.5rem;
+}
+
+.errorText {
+  color: #e28d8d !important;
+  margin: 0;
+  margin-left: 2rem;
+  text-align: left;
+  padding: 0.5em;
+}
+
+.successText {
+  color: #be7561;
+  padding: 0.5rem;
+}
+
+/* Tablet/mobile */
+@media (max-width: 992px) {
+  .tablet {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  span {
+    font-size: 3.5rem;
+  }
+  .introText {
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
